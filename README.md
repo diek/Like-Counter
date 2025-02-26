@@ -24,6 +24,12 @@ A problem given to me while interviewing
 * create a virtualenv and activate it
 * install the depenencies using pip, or uv.
 
+
+### Import Some Data
+`manage.py loaddata users.json`
+`manage.py loaddata post.json`
+
+
 ### Executing program
 
 * How to run the program

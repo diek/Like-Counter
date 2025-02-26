@@ -17,3 +17,6 @@ wheels/
 
 # Sandbox Files
 *.bak
+
+# Management Commands
+management/
