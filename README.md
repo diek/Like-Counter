@@ -11,8 +11,8 @@ A problem given to me while interviewing
 ### Dependencies
 
 * This code is a Django web application and requires:
-  Python >= 3.11
-  Django >=5.1
+  Python >= 3.11    
+  Django >=5.1    
 
   The remaining dependencies can be found in `pyproject.toml`
   
@@ -21,7 +21,7 @@ A problem given to me while interviewing
 
 * Download the source code to a working directory
 * cd into the directory
-* create a virtualenv
+* create a virtualenv and activate it
 * install the depenencies using pip, or uv.
 
 ### Executing program
