@@ -26,8 +26,8 @@ A problem given to me while interviewing
 
 
 ### Import Some Data
-`manage.py loaddata users.json`
-`manage.py loaddata post.json`
+`manage.py loaddata users.json`  
+`manage.py loaddata post.json`  
 
 
 ### Executing program
