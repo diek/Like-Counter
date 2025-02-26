@@ -47,6 +47,9 @@ THIRD_PARTY_UTILS = [
     "django_extensions",
     "debug_toolbar",
 ]
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_UTILS
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
@@ -101,7 +104,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = "users.PostUser"
+AUTH_USER_MODEL = "appusers.PostUser"
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
