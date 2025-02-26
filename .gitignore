@@ -14,3 +14,6 @@ wheels/
 
 # Env Variables
 .env
+
+# Sandbox Files
+*.bak

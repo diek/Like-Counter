@@ -1,11 +1,13 @@
 <!-- post_detail.html -->
+{% extends "base.html" %}
+{% block content %}
 <h1>{{ post.title }}</h1>
 <p>{{ post.content }}</p>
 <h2>Total Likes: {{ post.total_likes }}
 
 <form action="{% url 'like_post' post.id %}" method="POST">
 {% csrf_token %}
-<button type="submit">
+<button type="submit" class="btn btn-primary">
 {% if user in post.likes.all %}
 Unlike
 {% else %}
@@ -13,3 +15,4 @@ Like
 {% endif %}
 </button>
 </form>
+{% endblock content %}
