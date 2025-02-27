@@ -11,21 +11,28 @@ A problem given to me while interviewing
 ### Dependencies
 
 * This code is a Django web application and requires:
-  Python >= 3.11    
-  Django >=5.1    
+  - Python >= 3.11    
+  - Django >=5.1    
 
   The remaining dependencies can be found in `pyproject.toml`
   
 
-### Installing
+### Run this project locally
 
-* Download the source code to a working directory
-* cd into the directory
-* create a virtualenv and activate it
-* install the depenencies using pip, or uv.
+* Navigate to a working directory
+```
+git clone git@github.com:diek/simple-django-login.git  
+```
+* cd into
+* create a virtualenv, activate it
+```
+python3 -m venv _env  
+source _env/bin/activate  
+(_env)$ python3 -m pip install --upgrade pip  
+(_env)$ python3 -m pip install -r requirements  
+```
 
-
-### Import Some Data
+### Import Some Data to work with
 `manage.py loaddata users.json`  
 `manage.py loaddata post.json`  
 
@@ -35,14 +42,7 @@ A problem given to me while interviewing
 * How to run the program
 * Step-by-step bullets
 ```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
+python manage.py runserver
 ```
 
 ## Authors
