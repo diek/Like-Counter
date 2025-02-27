@@ -21,10 +21,11 @@ A problem given to me while interviewing
 
 * Navigate to a working directory
 ```
-git clone git@github.com:diek/simple-django-login.git  
+git clone git@github.com:diek/like-counter.git
+
+cd like-counter
 ```
-* cd into
-* create a virtualenv, activate it
+* create a virtualenv, activate it, and install requirements
 ```
 python3 -m venv _env  
 source _env/bin/activate  
@@ -33,9 +34,10 @@ source _env/bin/activate
 ```
 
 ### Import Some Data to work with
-`manage.py loaddata users.json`  
-`manage.py loaddata post.json`  
-
+```
+manage.py loaddata users.json  
+manage.py loaddata post.json    
+```
 
 ### Executing program
 
