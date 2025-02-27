@@ -14,18 +14,18 @@ A problem given to me while interviewing
   - Python >= 3.11    
   - Django >=5.1    
 
-  The remaining dependencies can be found in `pyproject.toml`
+The remaining dependencies can be found in `pyproject.toml`
   
 
 ### Run this project locally
 
 * Navigate to a working directory
 ```
-git clone git@github.com:diek/like-counter.git
+git clone git@github.com:diek/like-counter.git  
 
-cd like-counter
+cd like-counter  
 ```
-* create a virtualenv, activate it, and install requirements
+* create a virtualenv, activate it, and install requirements  
 ```
 python3 -m venv _env  
 source _env/bin/activate  
@@ -42,29 +42,26 @@ manage.py loaddata post.json
 ### Executing program
 
 * How to run the program
-* Step-by-step bullets
 ```
-python manage.py runserver
+python manage.py runserver   
 ```
 
 ## Authors
 
-Contributors names and contact info
-
-Derrick Kearney  
+[Derrick Kearney](mailto:d_kearney@bellaliant.net)  
 
 
 ## Version History
 
 * 0.1
-    * Initial Release
+    * Initial Release  
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details
+This project is licensed under the MIT License - see the LICENSE.md file for details  
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
-* [Creating a Custom User Model in Django](https://testdriven.io/blog/django-custom-user-model/) from Michael Herman
+Inspiration, code snippets, etc.  
+* [Creating a Custom User Model in Django](https://testdriven.io/blog/django-custom-user-model/) from Michael Herman  
 
