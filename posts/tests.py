@@ -99,6 +99,22 @@ class PostViewsTest(TestCase):
         self.assertEqual(response.status_code, 302)  # Should redirect
         self.assertEqual(Like.objects.count(), 0)  # Like should be removed
 
-    def test_like_requires_login(self):
-        """Test that liking a post requires authentication"""
-        pass
+
+class LoginRequiredTestCase(TestCase):
+    def setUp(self):
+        User = get_user_model()
+        self.user = User.objects.create_user(
+            email="normal@user.com", password="PeanutButter_22"
+        )
+        self.protected_url = reverse("like_post", args=[1])
+
+    def test_redirect_if_not_logged_in(self):
+        """Ensure an unauthenticated user is redirected to the login page."""
+        response = self.client.get(self.protected_url)
+        self.assertRedirects(response, f"login/?next={self.protected_url}")
+
+    def test_access_view_when_logged_in(self):
+        """Ensure a logged-in user can access the view."""
+        self.client.login(email="normal@user.com", password="PeanutButter_22")
+        response = self.client.get(self.protected_url)
+        self.assertNotEqual(response.status_code, 302)  # Not redirected

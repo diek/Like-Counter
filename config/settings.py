@@ -98,7 +98,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-FIXTURE_DIRS = [BASE_DIR / fixtures]
+FIXTURE_DIRS = [BASE_DIR / "fixtures"]
 
 DATABASES = {
     "default": {
