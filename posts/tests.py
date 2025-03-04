@@ -111,7 +111,6 @@ class LoginRequiredTestCase(TestCase):
     def test_login_required_for_liking_post(self):
         """Ensure that an unauthenticated user is redirected to login."""
         response = self.client.post(self.protected_url)
-        # AssertionError: 404 != 200 : Couldn't retrieve redirection page '/accounts/login/': response code was 404 (expected 200)
         self.assertRedirects(response, f"/login/?next={self.protected_url}")
 
     def test_access_view_when_logged_in(self):
