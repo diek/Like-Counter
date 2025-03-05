@@ -32,11 +32,16 @@ source _env/bin/activate
 (_env)$ python3 -m pip install --upgrade pip  
 (_env)$ python3 -m pip install -r requirements  
 ```
+* create a superuser to login
+```
+(_env)$ ./manage createsuperuser
+```
 
 ### Import Some Data to work with
 ```
-manage.py loaddata users.json  
-manage.py loaddata post.json    
+./manage.py loaddata users.json  
+./manage.py loaddata post.json 
+./manage.py loaddata like.json   
 ```
 
 ### Executing program
@@ -45,6 +50,11 @@ manage.py loaddata post.json
 ```
 python manage.py runserver   
 ```
+
+### Testing
+Disable Django-Debug Toolbar before running tests. References are found in:
+- settings.py
+- urls.py
 
 ## Authors
 

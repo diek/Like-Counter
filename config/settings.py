@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -45,14 +45,14 @@ PROJECT_APPS = ["appusers.apps.AppusersConfig", "posts.apps.PostsConfig"]
 
 THIRD_PARTY_UTILS = [
     "django_extensions",
-    # "debug_toolbar",
+    "debug_toolbar",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_UTILS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    # "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -63,17 +63,17 @@ MIDDLEWARE = [
 
 
 # Django Toolbar Config
-# def show_toolbar(request):
-#     return True
+def show_toolbar(request):
+    return True
 
 
-# DEBUG_TOOLBAR_CONFIG = {
-#     "SHOW_TOOLBAR_CALLBACK": show_toolbar,
-# }
+DEBUG_TOOLBAR_CONFIG = {
+    "SHOW_TOOLBAR_CALLBACK": show_toolbar,
+}
 
-# INTERNAL_IPS = "127.0.0.1"
+INTERNAL_IPS = "127.0.0.1"
 
-# DEBUG_TOOLBAR_CONFIG["IS_RUNNING_TESTS"] = False
+DEBUG_TOOLBAR_CONFIG["IS_RUNNING_TESTS"] = False
 
 ROOT_URLCONF = "config.urls"
 
