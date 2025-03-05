@@ -24,6 +24,3 @@ class LikeAdmin(admin.ModelAdmin):
     list_display = ("id", "post", "user", "created_at")
     list_filter = ("post", "user", "created_at")
     date_hierarchy = "created_at"
-
-
-# PeanutButter * 12

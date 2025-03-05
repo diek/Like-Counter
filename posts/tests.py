@@ -29,7 +29,7 @@ class PostModelTest(TestCase):
         """Test total_likes method"""
         self.assertEqual(self.post.total_likes(), 0)
         # create an instance of like
-        like = Like.objects.create(post=self.post, user=self.user)
+        Like.objects.create(post=self.post, user=self.user)
         self.assertEqual(self.post.total_likes(), 1)
 
 

@@ -4,7 +4,7 @@ Keep a tally of likes per Post.
 
 ## Description
 
-A problem given to me while interviewing
+A problem given to me while interviewing for [Lights On Software](https://lightsonsoftware.com/)
 
 ## Getting Started
 
