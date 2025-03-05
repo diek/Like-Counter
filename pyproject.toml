@@ -1,7 +1,7 @@
 [project]
-name = "like-counter"
+name = "lights_on_software"
 version = "0.1.0"
-description = "Add your description here"
+description = "A list of posts, each user can 'like' a post if logged in."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
